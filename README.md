@@ -1,8 +1,8 @@
 # Project Preview
 ![This is an image](https://i.postimg.cc/T1mJzbnC/Desain-tanpa-judul.png)
 
-ini website unutuk mencari filem yang di ambil dari [API](https://www.themoviedb.org/)
-lalu terhubung dapat langsung melihat detail filem dapat melihatnya dan ada link unutuk 
+ini website untuk mencari film yang di ambil dari [API](https://www.themoviedb.org/),
+lalu terhubung dan dapat langsung melihat detail filem ada link untuk 
 menonton film tersebut yang telah tersedia
 
 ## Kategori film
