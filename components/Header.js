@@ -1,10 +1,11 @@
 import {
-  BadgeCheckIcon,
+  VideoCameraIcon,
   CollectionIcon,
+  FilmIcon,
   HomeIcon,
   SparklesIcon,
   SearchIcon,
-  UserIcon,
+  ChipIcon,
 } from '@heroicons/react/outline';
 import Image from 'next/image';
 import Headeritem from './Headeritem';
@@ -12,24 +13,11 @@ import Link from 'next/link';
 
 function Header() {
   return (
-    <header className='flex flex-col sm:flex-row m-5 justify-between items-center h-auto'>
-      <div className='flex flex-grow justify-evenly max-w-2xl'>
+    <header className='flex flex-col sm:flex-row p-5 justify-between items-center h-auto -mt-7 sm:mt-0'>
+      <div className='flex flex-grow justify-start max-w-2xl mt-10 space-x-11 ml-6'>
         <Headeritem title='HOME' Icon={HomeIcon} data='/' />
-        <Headeritem
-          title='KATEGORI'
-          Icon={CollectionIcon}
-          data='/e/collection'
-        />
-        <Headeritem
-          title='CARI'
-          Icon={SearchIcon}
-          data='https://www.google.com/'
-        />
-        <Headeritem
-          title='DEV'
-          Icon={UserIcon}
-          data='https://awesome-easley-7e8a3e.netlify.app/'
-        />
+        <Headeritem title='Movie' Icon={FilmIcon} data='/movie' />
+        <Headeritem title='Series' Icon={ChipIcon} data='/tv' />
         <Headeritem title='ABOUT' Icon={SparklesIcon} data='/e/about' />
       </div>
       <Link href='/' passHref>

@@ -1,4 +1,4 @@
-import requests from '../utils/requests';
+import requests from '../utils/movie';
 import {useRouter} from 'next/router';
 import Link from 'next/link';
 

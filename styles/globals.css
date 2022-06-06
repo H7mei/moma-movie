@@ -7,6 +7,18 @@
     @apply bg-[#23062a] text-gray-300;
   }
 }
+
+/* #main {
+  background-color: #7a40f7;
+}
+
+#movie {
+  background-color: aquamarine;
+}
+
+#tv {
+  background-color: rgb(0, 19, 19);
+} */
 ::-webkit-scrollbar {
   display: none;
 }
