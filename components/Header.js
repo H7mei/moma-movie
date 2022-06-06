@@ -14,7 +14,7 @@ import Link from 'next/link';
 function Header() {
   return (
     <header className='flex flex-col sm:flex-row p-5 justify-between items-center h-auto -mt-7 sm:mt-0'>
-      <div className='flex flex-grow justify-start max-w-2xl mt-10 space-x-11 ml-6'>
+      <div className='flex flex-grow justify-start max-w-2xl mt-10 space-x-11 ml-0 md:ml-6'>
         <Headeritem title='HOME' Icon={HomeIcon} data='/' />
         <Headeritem title='Movie' Icon={FilmIcon} data='/movie' />
         <Headeritem title='Series' Icon={ChipIcon} data='/tv' />
