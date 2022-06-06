@@ -36,8 +36,6 @@ Berikut Daftar Kategori Film Yang Tersedia
 Kalo mau liat detail movienya teken aja gambar filemnya nanti di bagian bawah ada 
 link buat nonton filmnya
 
-![This is an image](https://i.postimg.cc/gj4pdxyb/mona-movie.png)
-
 ## Credits
 
 [Inspiration from sonnysangha](https://github.com/sonnysangha)
