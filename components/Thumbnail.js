@@ -9,8 +9,14 @@ const CustomComponent = react.forwardRef((props, ref) => (
   <a ref={ref} {...props}></a>
 ));
 
+function cn(...classes) {
+  return classes.filter(Boolean).join(' ');
+}
+
 const Thumbnail = forwardRef(({result, media}, ref) => {
   const BASE_URL = 'https://image.tmdb.org/t/p/original/';
+
+  const [isLoading, setLoading] = react.useState(true);
 
   return (
     <div
@@ -36,6 +42,13 @@ const Thumbnail = forwardRef(({result, media}, ref) => {
             objectFit='cover'
             priority
             alt=''
+            className={cn(
+              'duration-100 ease-in-out group-hover:opacity-75',
+              isLoading
+                ? 'scale-110 blur-2xl grayscale'
+                : 'scale-100 blur-0 grayscale-0',
+            )}
+            onLoadingComplete={() => setLoading(false)}
           />
         </CustomComponent>
       </Link>
