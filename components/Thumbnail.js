@@ -3,6 +3,11 @@ import Image from 'next/image';
 import {ThumbUpIcon} from '@heroicons/react/outline';
 import {forwardRef} from 'react';
 import Link from 'next/link';
+import react from 'react';
+
+const CustomComponent = react.forwardRef((props, ref) => (
+  <a ref={ref} {...props}></a>
+));
 
 const Thumbnail = forwardRef(({result, media}, ref) => {
   const BASE_URL = 'https://image.tmdb.org/t/p/original/';
@@ -13,22 +18,26 @@ const Thumbnail = forwardRef(({result, media}, ref) => {
       className='group cursor-pointer p-2 transition duration-200 ease-in-out transform sm:hover:scale-105 hover:z-50'
     >
       <Link
-        href={`./d/${result.media_type || media}/${result.id}`}
+        href={`/d/${result.media_type || media}/${result.id}`}
         key={result.id}
         id={result.id}
+        preload
         passHref
       >
-        <Image
-          layout='responsive'
-          src={
-            `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
-            `${BASE_URL}${result.poster_path}`
-          }
-          height={1080}
-          width={1920}
-          objectFit='cover'
-          alt=''
-        />
+        <CustomComponent>
+          <Image
+            layout='responsive'
+            src={
+              `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
+              `${BASE_URL}${result.poster_path}`
+            }
+            height={1080}
+            width={1920}
+            objectFit='cover'
+            priority
+            alt=''
+          />
+        </CustomComponent>
       </Link>
 
       <div className='p-2'>
